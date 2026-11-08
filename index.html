@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivia Showdown</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🏆 Trivia Showdown</h1>
+      <div class="header-actions">
+        <button id="rulesBtn" class="ghost-btn">📜 Rules</button>
+        <a href="rapidfire.html" class="ghost-btn">⚡ Rapid Fire Round</a>
+        <button id="resetBtn" class="ghost-btn">Reset Game</button>
+      </div>
+    </header>
+
+    <section class="scoreboard" id="scoreboard"></section>
+
+    <section class="turn-indicator">
+      Current Turn: <span id="currentTeamName">Team 1</span>
+      <button id="nextTurnBtn" class="ghost-btn small">Skip Turn ⏭</button>
+    </section>
+
+    <section class="board-wrap">
+      <div class="board" id="board"></div>
+    </section>
+  </div>
+
+  <div class="completion-overlay" id="completionOverlay">
+    <div class="question-card completion-card">
+      <h2 id="completionTitle">🎉 Board Complete! 🎉</h2>
+      <p id="completionMessage" class="modal-question"></p>
+      <p class="hint-text">🎁 Surprise: there's one more round to go — Rapid Fire!</p>
+      <div class="modal-actions" style="gap:10px;">
+        <a href="rapidfire.html" class="primary-btn" style="text-decoration:none;display:inline-block;">⚡ Start Rapid Fire</a>
+        <button id="dismissCompletionBtn" class="ghost-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="storage.js"></script>
+  <script src="script.js"></script>
+  <script src="rules.js"></script>
+</body>
+</html>

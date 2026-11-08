@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question — Trivia Showdown</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🏆 Trivia Showdown</h1>
+      <div class="header-actions">
+        <button id="rulesBtn" class="ghost-btn">📜 Rules</button>
+        <a href="index.html" class="ghost-btn">← Back to Board</a>
+      </div>
+    </header>
+
+    <div class="question-page">
+      <div class="question-card">
+        <div class="modal-header">
+          <span class="modal-cat" id="qCategory">Category</span>
+          <span class="modal-points" id="qPoints">100 pts</span>
+        </div>
+        <p class="turn-indicator" style="margin:0 0 16px;text-align:left;">
+          Answering now: <span id="qTeamName">Team 1</span>
+          <span id="timerDisplay" class="timer-display">⏱ 15s</span>
+        </p>
+
+        <p class="modal-question" id="qQuestion">Question text</p>
+
+        <div id="answerArea"></div>
+
+        <div class="modal-actions">
+          <button id="submitBtn" class="primary-btn">Submit Answer</button>
+        </div>
+
+        <div id="resultArea" class="result-area hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <div id="confettiContainer" class="confetti-container"></div>
+
+  <script src="questions.js"></script>
+  <script src="storage.js"></script>
+  <script src="effects.js"></script>
+  <script src="question.js"></script>
+  <script src="rules.js"></script>
+</body>
+</html>

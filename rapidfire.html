@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapid Fire — Trivia Showdown</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>⚡ Rapid Fire Round</h1>
+      <div class="header-actions">
+        <button id="rulesBtn" class="ghost-btn">📜 Rules</button>
+        <a href="index.html" class="ghost-btn">← Back to Board</a>
+      </div>
+    </header>
+
+    <div class="question-page">
+      <div class="question-card" id="rfCard">
+        <!-- rendered by rapidfire.js -->
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <div id="confettiContainer" class="confetti-container"></div>
+
+  <script src="questions.js"></script>
+  <script src="storage.js"></script>
+  <script src="effects.js"></script>
+  <script src="rapidfire.js"></script>
+  <script src="rules.js"></script>
+</body>
+</html>
